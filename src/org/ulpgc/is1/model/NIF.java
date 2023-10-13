@@ -1,5 +1,5 @@
 package org.ulpgc.is1.model;
-//Crear resto de clases
+//Crear resto de clases y añadir el isValid()
 public class NIF {
     public String number;
 
