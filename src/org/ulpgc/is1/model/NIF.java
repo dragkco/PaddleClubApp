@@ -1,5 +1,5 @@
 package org.ulpgc.is1.model;
-#Crear resto de calses
+//Crear resto de clases
 public class NIF {
     public String number;
 
