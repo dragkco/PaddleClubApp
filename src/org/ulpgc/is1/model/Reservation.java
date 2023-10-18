@@ -1,7 +1,7 @@
 package org.ulpgc.is1.model;
 //Falta añadir el date
 public class Reservation {
-    private  int NEXT_ID = 0;
+    private int NEXT_ID = 0;
     public int id;
 
     public Reservation(int id) {
