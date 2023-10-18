@@ -1,13 +1,30 @@
 package org.ulpgc.is1.model;
 
-public class PaddleManager extends Customer{
-    public PaddleManager(String name, String surname) {
-        super(name, surname);
+import java.util.ArrayList;
+
+public class PaddleManager{
+    ArrayList<Customer> customerList = new ArrayList<>();
+    ArrayList<Court> courtList = new ArrayList<>();
+    public PaddleManager() {
     }
 
     public void addCustomer(String name, String Surname){
 
     }
 
+    public void addCourt(){
 
+    }
+
+    public Customer getCustomer(){
+        return;
+    }
+
+    public Court getCourt(){
+        return;
+    }
+
+    public void reserve(){
+
+    }
 }
