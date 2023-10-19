@@ -1,9 +1,9 @@
 package org.ulpgc.is1.model;
 
-public class Extra {
+public abstract class Extra {
     protected int price;
 
-    public Extra(int price) {
+    public  Extra(int price) {
         this.price = price;
     }
 
@@ -14,6 +14,7 @@ public class Extra {
     public void setPrice(int price) {
         this.price = price;
     }
+
 
 
 }

@@ -14,7 +14,7 @@ public class PaddleManager{
     }
 
     public void addCourt(String name, int price){
-        courtList.add(new Court(name, price));
+        //courtList.add(new Court(name, price));
     }
 
     public Customer getCustomer(int index){
@@ -29,5 +29,6 @@ public class PaddleManager{
         Customer customer = getCustomer(index1);
         Court court = getCourt(index2);
         new Reservation(id, customer, court);
+
     }
 }
