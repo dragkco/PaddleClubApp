@@ -12,6 +12,7 @@ public class Equipment extends Extra {
         return "Equipamiento:" + name + "  " + price +"€";
     }
 
+
     public void setName(String name) {
         this.name = name;
     }

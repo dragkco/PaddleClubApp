@@ -11,6 +11,7 @@ public class Member extends Customer{
         
     }
 
+
     public Adress getAdress() {
         return adress;
     }

@@ -15,6 +15,7 @@ public class NIF {
         }
     }
 
+
     public String getNumber() {
         return number;
     }
