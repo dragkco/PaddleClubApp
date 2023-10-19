@@ -25,10 +25,10 @@ public class PaddleManager{
         return courtList.get(index);
     }
 
-
     public void reserve(int id, int index1, int index2){
         Customer customer = getCustomer(index1);
         Court court = getCourt(index2);
-        new Reservation( id, customer, court);
+        new Reservation(id, customer, court);
+
     }
 }
