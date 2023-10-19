@@ -1,10 +1,11 @@
 package org.ulpgc.is1.model;
-//Crear resto de clases y añadir el isValid()
+
 public class NIF {
     public String number;
 
     public NIF(String number) {
         this.number = number;
+         private static final String NIF_REGEX = "^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$";
     }
 
     public String getNumber() {
@@ -14,5 +15,13 @@ public class NIF {
     public void setNumber(String number) {
         this.number = number;
     }
+       public static boolean isValid(String nif) {
+        if (nif == null) {
+            return false;
+        }
+        Pattern pattern = Pattern.compile(NIF_REGEX);
+        Matcher matcher = pattern.matcher(nif);
+        return matcher.matches();
+       }
 
 }
