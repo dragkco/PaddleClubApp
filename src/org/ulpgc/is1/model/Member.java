@@ -11,6 +11,10 @@ public class Member extends Customer{
         
     }
 
+    public Adress getAdress() {
+        return adress;
+    }
+
     public int getPoints() {
         return points;
     }

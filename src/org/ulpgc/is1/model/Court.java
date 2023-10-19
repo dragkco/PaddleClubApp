@@ -1,27 +1,50 @@
 package org.ulpgc.is1.model;
 
-public class Court {
-    public String name;
-    public  int price;
+import java.util.Objects;
 
-    public Court(String name, int price) {
+public class Court {
+    private final String name;
+    private final int price;
+    private final CourtType courtType;
+
+    public Court(String name, int price,CourtType courtType) {
         this.name = name;
         this.price = price;
-    }
+        this.courtType = courtType;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public String getName() {
+        return name;
     }
+
+    public CourtType getType() {
+        return courtType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Court court = (Court) o;
+        return price == court.price &&
+                Objects.equals(name, court.name) &&
+                courtType == court.courtType;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price, courtType);
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre de la pista: " + name + "\n" + "Precio: " + price + "€\n" + "Tipo de pista: " + courtType;
+    }
+
+
 }

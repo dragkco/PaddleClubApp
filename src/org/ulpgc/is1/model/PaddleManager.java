@@ -9,12 +9,12 @@ public class PaddleManager{
     public PaddleManager() {
     }
 
-    public void addCustomer(String name, String surname){
-        customerList.add(new Customer(name, surname));
+    public void addCustomer(String name, String surname, NIF nif){
+        customerList.add(new Customer(name, surname, nif));
     }
 
     public void addCourt(String name, int price){
-        courtList.add(new Court(name, price));
+        //courtList.add(new Court(name, price));
     }
 
     public Customer getCustomer(int index){
@@ -25,7 +25,9 @@ public class PaddleManager{
         return courtList.get(index);
     }
 
-    public void reserve(){
-
+    public void reserve(int id, int index1, int index2){
+        Customer customer = getCustomer(index1);
+        Court court = getCourt(index2);
+        new Reservation( id, customer, court);
     }
 }
