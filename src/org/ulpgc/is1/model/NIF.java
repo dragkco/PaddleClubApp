@@ -1,11 +1,14 @@
 package org.ulpgc.is1.model;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class NIF {
+    private static final String NIF_REGEX = "^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$";
     public String number;
 
     public NIF(String number) {
         this.number = number;
-         private static final String NIF_REGEX = "^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$";
     }
 
     public String getNumber() {

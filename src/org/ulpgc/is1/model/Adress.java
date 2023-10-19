@@ -12,33 +12,4 @@ public class Adress {
         PostalCode = postalCode;
         this.city = city;
     }
-
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public int getPostalCode() {
-        return PostalCode;
-    }
-
-    public void setPostalCode(int postalCode) {
-        PostalCode = postalCode;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
 }

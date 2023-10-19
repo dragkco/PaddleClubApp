@@ -1,19 +1,23 @@
 package org.ulpgc.is1.control;
+package org.ulpgc.is1.control;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import org.ulpgc.is1.model.CourtType;
+import org.ulpgc.is1.model.NIF;
+import org.ulpgc.is1.model.PaddleManager;
+
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void innit(PaddleManager paddleManager){
+        paddleManager.addCustomer("Pedro", "Picapiedra", new NIF("46253476Q"));
+        paddleManager.addCustomer("Manolo", "Viera", new NIF("12SD34TT4"));
+        paddleManager.addCourt("Rápida", 40, CourtType.FasTCOURT);
+        paddleManager.addCourt("Lenta", 35, CourtType.SLOWCOURT);
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
     }
-}
+    public static void main(String[] args) {
+        PaddleManager paddleManager = new PaddleManager();
+        innit(paddleManager);
+        System.out.println(paddleManager.getCustomer(0).getNif());
+        System.out.println(paddleManager.getCustomer(1).getNif());
+        System.out.println(paddleManager.getCustomer(0));
+        System.out.println(paddleManager.getCustomer(1));
+        System.out.println(paddleManager.getCourt(1));
