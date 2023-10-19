@@ -9,8 +9,8 @@ public class Main {
     public static void innit(PaddleManager paddleManager){
         paddleManager.addCustomer("Pedro", "Picapiedra", new NIF("46253476Q"));
         paddleManager.addCustomer("Manolo", "Viera", new NIF("12SD34TT4"));
-        paddleManager.addCourt("Rápida", 40, CourtType.FasTCOURT);
-        paddleManager.addCourt("Lenta", 35, CourtType.SLOWCOURT);
+        paddleManager.addCourt("Rápida", 40, CourtType.FastCourt);
+        paddleManager.addCourt("Lenta", 35, CourtType.Slowcourt,);
 
     }
     public static void main(String[] args) {
