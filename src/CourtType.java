@@ -1,3 +1,3 @@
-public class CourtType {
-    
+public enum CourtType {
+    Slowcourt, FastCourt
 }
