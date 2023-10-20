@@ -8,8 +8,13 @@ public class NIF {
     public String number;
 
     public NIF(String number) {
-        this.number = number;
+        if (isValid(number)) {
+            this.number = number;
+        } else {
+            this.number = "XXXX";
+        }
     }
+
 
     public String getNumber() {
         return number;
@@ -26,5 +31,9 @@ public class NIF {
         Matcher matcher = pattern.matcher(nif);
         return matcher.matches();
        }
+    @Override
+    public String toString() {
+        return "NIF=" + number;
+    }
 
 }

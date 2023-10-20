@@ -9,8 +9,9 @@ public class Equipment extends Extra {
     }
 
     public String getName() {
-        return "Equipamiento" +name;
+        return "Equipamiento:" + name + "  " + price +"€";
     }
+
 
     public void setName(String name) {
         this.name = name;
