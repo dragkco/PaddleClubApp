@@ -13,7 +13,7 @@ public class Reservation {
     private final Customer customer;
     private final Court court;
 
-    public Reservation(int id, Customer customer, Court court) {
+    public Reservation(Customer customer, Court court) {
         this.id = NEXT_ID++;
         this.date = new Date();
         this.extras = new ArrayList<>();

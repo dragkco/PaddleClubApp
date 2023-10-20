@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class PaddleManager{
     ArrayList<Customer> customerList = new ArrayList<>();
     ArrayList<Court> courtList = new ArrayList<>();
+    ArrayList<Reservation> reservationList = new ArrayList<>();
     public PaddleManager() {
     }
 
@@ -13,22 +14,49 @@ public class PaddleManager{
         customerList.add(new Customer(name, surname, nif));
     }
 
-    public void addCourt(String name, int price){
-        //courtList.add(new Court(name, price));
+    public void addMember(String name, String surname, Adress adress, NIF nif){
+        customerList.add(new Member(0, name, surname, adress, nif));
+    }
+
+    public void removeCustomer(int index){
+        customerList.remove(index);
+    }
+
+    public void addCourt(String name, int price, CourtType type){
+        courtList.add(new Court(name, price, type));
+    }
+
+    public void removeCourt(int index){
+        courtList.remove(index);
     }
 
     public Customer getCustomer(int index){
         return customerList.get(index);
     }
 
+    public ArrayList<Customer> countCustomer(){
+        return customerList;
+    }
+
     public Court getCourt(int index){
         return courtList.get(index);
     }
 
-    public void reserve(int id, int index1, int index2){
+    public ArrayList<Court> countCourt(){
+        return courtList;
+    }
+
+    public void reserve(int index1, int index2){
         Customer customer = getCustomer(index1);
         Court court = getCourt(index2);
-        new Reservation(id, customer, court);
+        reservationList.add(new Reservation(customer, court));
+    }
 
+    public Reservation getReservation(int index){
+        return reservationList.get(index);
+    }
+
+    public ArrayList<Reservation> countReservation(){
+        return reservationList;
     }
 }
