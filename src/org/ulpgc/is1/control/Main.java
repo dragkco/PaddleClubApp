@@ -7,8 +7,8 @@ import org.ulpgc.is1.model.PaddleManager;
 
 public class Main {
     public static void innit(PaddleManager paddleManager) {
-        paddleManager.addMember("Pedro", "Picapiedra",new Adress("Las Palmas", 5, 35000, "Las Palmas"), new NIF("46253476Q"));
-        paddleManager.addCustomer("Manolo", "Viera", new NIF("12SD34TT4"));
+        paddleManager.addMember("Pedro", "Picapiedra",new Adress("Mesa  y Lopez", 5, 35400, "Las Palmas"), new NIF("46253476Q"));
+        paddleManager.addCustomer("Manolo", "lama", new NIF("12SD34TT4"));
         paddleManager.addCourt("Rápida", 40, CourtType.FastCourt);
         paddleManager.addCourt("Lenta", 35, CourtType.Slowcourt);
 

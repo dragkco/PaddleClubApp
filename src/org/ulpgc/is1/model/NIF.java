@@ -33,7 +33,7 @@ public class NIF {
        }
     @Override
     public String toString() {
-        return "NIF=" + number;
+        return number;
     }
 
 }
