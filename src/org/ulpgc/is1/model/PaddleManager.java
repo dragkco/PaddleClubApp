@@ -1,8 +1,6 @@
 package org.ulpgc.is1.model;
 
 import java.util.ArrayList;
-
-//Falta añadir addMember además de cambiar unas cuantas funciones de otras clases
 public class PaddleManager{
     ArrayList<Customer> customerList = new ArrayList<>();
     ArrayList<Court> courtList = new ArrayList<>();
